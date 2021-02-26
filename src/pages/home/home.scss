@@ -1,3 +1,26 @@
 page-home {
-
+    .bg-style {
+        background: rgb(199, 255, 255);
+        align-items: center;
+    }
+    
+    .header {
+        height: control-height;
+      }
+    
+      #rounded {
+        width: 100%;
+        // height: 100px;
+        -moz-border-radius: 50px;
+        -webkit-border-radius: 50px;
+        border-radius: 10px;
+        margin-bottom: 10px;  
+    }
+    
+    #container {
+        width: 300px; 
+        margin-left:auto; 
+        margin-right: auto; 
+    }
+      
 }

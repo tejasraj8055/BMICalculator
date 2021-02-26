@@ -1,14 +1,39 @@
-<ion-header>
+<ion-header class="bg-style">
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      BMI Calculator
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v3">docs</a> will be your guide.
-  </p>
-</ion-content>
+<ion-content class="bg-style" padding>
+  <form [formGroup]="myForm">
+    <div id="container">
+      <ion-list>
+        <ion-item id="rounded">
+          <ion-label stacked>Weight</ion-label>
+          <ion-input type="number"  [formControl]="myForm.controls['weight']" placeholder=" KG" [(ngModel)]="weight"></ion-input>
+        </ion-item><br><br>
+    
+        <ion-item id="rounded">
+          <ion-label stacked>Height</ion-label>
+          <ion-input type="number"   [formControl]="myForm.controls['height']" placeholder=" CM" [(ngModel)]="height"></ion-input>
+        </ion-item><br><br>
+    
+        <ion-row>
+          <ion-col text-center>
+            <button ion-button color="light"  round [disabled]="!myForm.valid" (click)="bmiCalculator()">Calculate</button>
+          </ion-col>
+        </ion-row>
+         
+        <br><br><br><br>
+   
+        <h1>BMI : {{ans}}</h1>
+        <h2>{{result}}</h2>
+        
+      </ion-list>
+    </div>
+  </form>
+ 
+ 
+ </ion-content>
